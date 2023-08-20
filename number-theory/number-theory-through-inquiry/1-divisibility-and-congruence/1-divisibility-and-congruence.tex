@@ -9,60 +9,9 @@
 \usetikzlibrary{matrix}
 \usepackage[thinlines]{easytable}
 
-\usepackage[left=2cm,top=0.5cm,right=3cm,bottom=1cm,nohead,nofoot]{geometry}
+\usepackage[left=2cm,top=1.5cm,right=2cm,bottom=1cm,nohead,nofoot]{geometry}
 
 %\addtolength{\hoffset}{-.25in} \addtolength{\textwidth}{.25in}
-
-
-\newcommand{\ds}{\displaystyle}
-
-
-\newcommand{\al}{\alpha}
-\newcommand{\be}{\beta}
-
-\newcommand{\lcm}{\text{lcm}}
-\newcommand{\ord}{\text{ord}}
-\newcommand{\modulo}[1]{\text{ (mod $#1$)}}
-\newcommand{\pa}[1]{\left(#1\right)}
-
-
-\newcommand{\bN}{\mathbb{N}}
-\newcommand{\bZ}{\mathbb{Z}}
-\newcommand{\bQ}{\mathbb{Q}}
-\newcommand{\bR}{\mathbb{R}}
-\newcommand{\bC}{\mathbb{C}}
-
-\newcommand{\cF}{\mathcal{F}}
-\newcommand{\cG}{\mathcal{G}}
-\newcommand{\cH}{\mathcal{H}}
-\newcommand{\cI}{\mathcal{I}}
-\newcommand{\cJ}{\mathcal{J}}
-\newcommand{\cK}{\mathcal{K}}
-\newcommand{\cL}{\mathcal{L}}
-\newcommand{\cP}{\mathcal{P}}
-\newcommand{\cQ}{\mathcal{Q}}
-\newcommand{\cR}{\mathcal{R}}
-\newcommand{\cS}{\mathcal{S}}
-
-
-\newcommand{\Array}[1]{\begin{array}{lllllllllllllllll}#1\end{array}}
-
-\newcommand{\thm}[1]{\noindent {\bf Theorem #1.}}
-
-\newcommand{\defn}[1]{\noindent {\bf Definition.}}
-
-\newcommand{\lem}[1]{\noindent {\bf Lemma #1.}}
-
-\newcommand{\cor}[1]{\noindent {\bf Corollary #1.}}
-
-\newcommand{\ex}[1]{\noindent {\bf Exercise #1.}}
-
-\newcommand{\qn}[1]{\noindent {\bf Question #1.}}
-
-\newcommand{\prob}[1]{\noindent {\bf Problem #1.}}
-
-
-
 
 %opening
 
@@ -73,26 +22,32 @@
 \begin{center}
     Chapter 1: Divisibility and Congruence
 \end{center}
-~\\
-~\\
+\subsection*{Definitions}
+\begin{enumerate}
+\item Natural Numbers: $\{1, 2, 3, 4, ...\}$
+\item Integers: $\{..., -3, -2, -1, 0, 1, 2, 3, ...\}$
+\item Suppose $a$ and $d$ are integers. Then $d$ \emph{divides} $a$, denoted $d \vert a$, if and only if there is an integer $k$ such that $a = kd$. 
+\item Suppose that $a$, $b$, and $n$ are integers, with $n > 0$. We say that $a$ and $b$ are \emph{congruent modulo $n$} if and only if $n \vert (a - b)$. We denote this relationship as $a \equiv b$ (mod $n$) and read these symbols as \emph{$a$ is congruent to $b$ modulo $n$}.
+\end{enumerate}
+
+\newpage
+\subsection*{Exercises}
 \noindent \textbf{1.1 Theorem.} 
 \emph{Let  $a$, $b$, and $c$ be integers. 
 If $a \vert b$ and $a \vert c$, then $a \vert (b+c)$.}
 ~\\
 ~\\
 \textbf{Proof:}  
-By definition of divides \qed
+Suppose $a$, $b$, and $c$ to be integers such that $a \vert b$ and $a \vert c$. By definition of divides, $b = ka$ for some $k \in \mathbb{Z}$ and $c = la$ for some $l \in \mathbb{Z}$. By substitution, $b + c = ka + la = a (k + l)$. Because integers are closed under addition, then $(k + l) \in \mathbb{Z}$. Therefore, by definition of divides, $a \vert (b + c)$. \qed
 ~\\
-~\\
-
 
 \noindent \textbf{1.2 Theorem.} 
 \emph{Let  $a$, $b$, and $c$ be integers. 
 If $a \vert b$ and $a \vert c$, then $a \vert (b-c)$.}
 ~\\
 ~\\
-\textbf{Proof:}  \qed
-~\\
+\textbf{Proof:}
+Suppose $a$, $b$, and $c$ to be integers such that $a \vert b$ and $a \vert c$. By definition of divides, $b = ka$ for some $k \in \mathbb{Z}$ and $c = la$ for some $l \in \mathbb{Z}$. By substitution, $b - c = ka - la = a (k - l)$. Because integers are closed under addition, then $(k - l) \in \mathbb{Z}$. Therefore, by definition of divides, $a \vert (b - c)$. \qed
 ~\\
 
 \noindent \textbf{1.3 Theorem.}
@@ -101,8 +56,7 @@ then $a \vert bc$.}
 ~\\
 ~\\
 \textbf{Proof:}
- \qed
-~\\
+Suppose $a$, $b$, and $c$ to be integers such that $a \vert b$ and $a \vert c$. By definition of divides, $b = ka$ for some $k \in \mathbb{Z}$ and $c = la$ for some $l \in \mathbb{Z}$. By substition, $bc = (ka) \cdot (la) = a \cdot (akl)$. Because integers are closed under multiplication, then $akl \in \mathbb{Z}$. Therefore, by definition of divides, $a \vert bc$. \qed
 ~\\
 
 \noindent \textbf{1.4a Question.} 
@@ -122,10 +76,6 @@ theorem?}
 ~\\
 \textbf{Answer:} Yes, you can. 
 ~\\
-~\\
-
-\newpage
-~\\
 
 \noindent \textbf{1.5 Theorem.} 
 \emph{Let $a$, $b$, and $c$ be integers. If $a \vert b$ and $a \vert c$, 
@@ -133,8 +83,7 @@ then $a^2 \vert bc$.}
 ~\\
 ~\\
 \textbf{Proof:}
-\qed
-~\\
+Suppose $a$, $b$, and $c$ to be integers such that $a \vert b$ and $a \vert c$. By definition of divides, $b = ka$ for some $k \in \mathbb{Z}$ and $c = la$ for some $l \in \mathbb{Z}$. By substition, $bc = (ka) \cdot (la) = a^2 \cdot (kl)$. Because integers are closed under multiplication, then $kl \in \mathbb{Z}$. Therefore, by definition of divides, $a^2 \vert bc$. \qed
 ~\\
 
 \noindent \textbf{1.6 Theorem.} 
@@ -143,20 +92,22 @@ then $a \vert bc$.}
 ~\\
 ~\\
 \textbf{Proof:}
- \qed
+Suppose $a$, $b$, and $c$ to be integers such that $a \vert b$. By definition of divides, $b = ka$ for some $k \in \mathbb{Z}$. By substitution, $bc = (ka) \cdot c = a \cdot (kc)$. Because integers are closed under multiplication, then $kc \in \mathbb{Z}$. Therefore, by definition of divides, $a \vert bc$. \qed
 ~\\
+
+\newpage
 ~\\
 
 \noindent \textbf{1.7 Exercise.} \emph{Answer each of the following questions, 
 and prove that your answer is correct.}
 ~\\
-\emph{1. Is} 45 $\equiv$ 9 (mod 4)\emph{?} 
+\emph{1. Is} 45 $\equiv$ 9 (mod 4)\emph{?} Yes, $4 \vert (45 - 9)$. 
 ~\\
-\emph{2. Is} 37 $\equiv$ 2 (mod 5)\emph{?} 
+\emph{2. Is} 37 $\equiv$ 2 (mod 5)\emph{?} Yes, $5 \vert (37 - 2)$. 
 ~\\
-\emph{3. Is} 37 $\equiv$ 3 (mod 5)\emph{?} 
+\emph{3. Is} 37 $\equiv$ 3 (mod 5)\emph{?} No, $5 \not \vert (37 - 3)$. 
 ~\\
-\emph{4. Is} 37 $\equiv$ -3 (mod 5)\emph{?}
+\emph{4. Is} 37 $\equiv$ -3 (mod 5)\emph{?} Yes, $5 \vert (37 - (-3))$. 
 ~\\
 
 \noindent \textbf{1.8 Exercise.} \emph{For each of the following congruences, 
@@ -172,15 +123,14 @@ characterize all the integers m that satisfy that congruence.}
 ~\\
 \emph{5.} $m \equiv 4$ (mod 3). \; $m = 3k + 1 \; \; \; k \in \mathbb{Z}$
 ~\\
-~\\
 
 \noindent \textbf{1.9 Theorem.} \emph{Let $a$ and $n$ be integers with $n > 0$.
 Then $a \equiv a$} (mod $n$). 
 ~\\
 ~\\
 \textbf{Proof:} 
+Suppose $a$ and $n$ be integers with $n > 0$. By algebra, $a - a = 0 = n \cdot 0$. So, by definition of divides, $n \vert (a - a)$. Therefore, by definition of congruence, $a \equiv a$ (mod $n$)
 \qed
-\newpage
 ~\\
 
 \noindent \textbf{1.10 Theorem.} \emph{Let $a$, $b$, and $n$ be integers with $n>0$. 
@@ -188,15 +138,14 @@ If $a \equiv b$} (mod $n$)\emph{, then $b \equiv a$} (mod $n$).
 ~\\
 ~\\
 \textbf{Proof:} 
+Suppose $a$ and $n$ be integers with $n > 0$ such that $a \equiv b$ (mod $n$). By definition of congruence, $n \vert (a - b)$. By definition of divides, $a - b = nk$ where $k \in \mathbb{Z}$. Multiplying both sides by $-1$, $b - a \equiv n(-k)$. Since integers are closed under multiplication, $(-k) \in \mathbb{Z}$. Hence, $n \vert (b-a)$ by definition of divides. Therefore, $b \equiv a$ (mod $n$). 
  \qed
 ~\\
-~\\
 
-\noindent \textbf{1.11 Theorem.} \emph{Let $a$, $b$, $c$, and $n$ be integers with $n>0$. 
-If $a \equiv b$ (}mod\emph{ $n$) and $b \equiv c$ (}mod\emph{ $n$), then $a \equiv c$ 
-(}mod\emph{ $n$).}
+\noindent \textbf{1.11 Theorem.} \emph{Let $a$, $b$, $c$, and $n$ be integers with $n>0$. If $a \equiv b$ (}mod\emph{ $n$) and $b \equiv c$ (}mod\emph{ $n$), then $a \equiv c$ (}mod\emph{ $n$).}
 ~\\
 ~\\
-\textbf{Proof:}  \qed
+\textbf{Proof:} 
+Suppose $a$, $b$, $c$, and $n$ to be integers with $n>0$ such that $a \equiv b$ (mod $n$) and $b \equiv c$ (mod $n$). By definition of congruence, $n \vert (a - b)$ and $n \vert (b - c)$. By definition of divides, $a - b = kn$ where $k \in \mathbb{Z}$ and $b - c = ln$ where $l \in \mathbb{Z}$. By substitution, $a - c = (a - b) + (b - c) = kn + ln = n( k + l)$. Since integers are closed under addition, $(k + l) \in \mathbb{Z}$. Thus, by definition of divides, $n \vert (a - c)$. Therefore, by definition of congruence, $a \equiv c$ (mod $n$). \qed
 
 \end{document}
