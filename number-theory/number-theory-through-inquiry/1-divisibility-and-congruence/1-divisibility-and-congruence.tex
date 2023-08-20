@@ -1,0 +1,202 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{amscd}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{cancel}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\usepackage[thinlines]{easytable}
+
+\usepackage[left=2cm,top=0.5cm,right=3cm,bottom=1cm,nohead,nofoot]{geometry}
+
+%\addtolength{\hoffset}{-.25in} \addtolength{\textwidth}{.25in}
+
+
+\newcommand{\ds}{\displaystyle}
+
+
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+
+\newcommand{\lcm}{\text{lcm}}
+\newcommand{\ord}{\text{ord}}
+\newcommand{\modulo}[1]{\text{ (mod $#1$)}}
+\newcommand{\pa}[1]{\left(#1\right)}
+
+
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bQ}{\mathbb{Q}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bC}{\mathbb{C}}
+
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+
+
+\newcommand{\Array}[1]{\begin{array}{lllllllllllllllll}#1\end{array}}
+
+\newcommand{\thm}[1]{\noindent {\bf Theorem #1.}}
+
+\newcommand{\defn}[1]{\noindent {\bf Definition.}}
+
+\newcommand{\lem}[1]{\noindent {\bf Lemma #1.}}
+
+\newcommand{\cor}[1]{\noindent {\bf Corollary #1.}}
+
+\newcommand{\ex}[1]{\noindent {\bf Exercise #1.}}
+
+\newcommand{\qn}[1]{\noindent {\bf Question #1.}}
+
+\newcommand{\prob}[1]{\noindent {\bf Problem #1.}}
+
+
+
+
+%opening
+
+\begin{document}
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\begin{center}
+    Chapter 1: Divisibility and Congruence
+\end{center}
+~\\
+~\\
+\noindent \textbf{1.1 Theorem.} 
+\emph{Let  $a$, $b$, and $c$ be integers. 
+If $a \vert b$ and $a \vert c$, then $a \vert (b+c)$.}
+~\\
+~\\
+\textbf{Proof:}  
+By definition of divides \qed
+~\\
+~\\
+
+
+\noindent \textbf{1.2 Theorem.} 
+\emph{Let  $a$, $b$, and $c$ be integers. 
+If $a \vert b$ and $a \vert c$, then $a \vert (b-c)$.}
+~\\
+~\\
+\textbf{Proof:}  \qed
+~\\
+~\\
+
+\noindent \textbf{1.3 Theorem.}
+\emph{Let $a$, $b$, and $c$ be integers. If $a \vert b$ and $a \vert c$, 
+then $a \vert bc$.}
+~\\
+~\\
+\textbf{Proof:}
+ \qed
+~\\
+~\\
+
+\noindent \textbf{1.4a Question.} 
+\emph{Can you weaken the hypothesis of the previous theorem and
+still prove the conclusion? }
+~\\
+~\\
+\textbf{Answer:} Yes, $a$ only needs to divide $b$ or $c$ instead of 
+$b$ and $c$. 
+~\\
+~\\
+\textbf{1.4b Question.}
+\emph{Can you keep the same hypothesis, but replace
+the conclusion by the stronger conclusion that $a^2 \vert bc$ and still prove the
+theorem?}
+~\\
+~\\
+\textbf{Answer:} Yes, you can. 
+~\\
+~\\
+
+\newpage
+~\\
+
+\noindent \textbf{1.5 Theorem.} 
+\emph{Let $a$, $b$, and $c$ be integers. If $a \vert b$ and $a \vert c$, 
+then $a^2 \vert bc$.}
+~\\
+~\\
+\textbf{Proof:}
+\qed
+~\\
+~\\
+
+\noindent \textbf{1.6 Theorem.} 
+\emph{Let $a$, $b$, and $c$ be integers. If $a \vert b$, 
+then $a \vert bc$.}
+~\\
+~\\
+\textbf{Proof:}
+ \qed
+~\\
+~\\
+
+\noindent \textbf{1.7 Exercise.} \emph{Answer each of the following questions, 
+and prove that your answer is correct.}
+~\\
+\emph{1. Is} 45 $\equiv$ 9 (mod 4)\emph{?} 
+~\\
+\emph{2. Is} 37 $\equiv$ 2 (mod 5)\emph{?} 
+~\\
+\emph{3. Is} 37 $\equiv$ 3 (mod 5)\emph{?} 
+~\\
+\emph{4. Is} 37 $\equiv$ -3 (mod 5)\emph{?}
+~\\
+
+\noindent \textbf{1.8 Exercise.} \emph{For each of the following congruences, 
+characterize all the integers m that satisfy that congruence.}
+~\\
+\emph{1.} $m \equiv 0$ (mod 3). \; $m = 3k \; \; \; k \in \mathbb{Z}$
+~\\
+\emph{2.} $m \equiv 1$ (mod 3). \; $m = 3k + 1 \; \; \; k \in \mathbb{Z}$
+~\\
+\emph{3.} $m \equiv 2$ (mod 3). \; $m = 3k + 2 \; \; \; k \in \mathbb{Z}$
+~\\
+\emph{4.} $m \equiv 3$ (mod 3). \; $m = 3k \; \; \; k \in \mathbb{Z}$
+~\\
+\emph{5.} $m \equiv 4$ (mod 3). \; $m = 3k + 1 \; \; \; k \in \mathbb{Z}$
+~\\
+~\\
+
+\noindent \textbf{1.9 Theorem.} \emph{Let $a$ and $n$ be integers with $n > 0$.
+Then $a \equiv a$} (mod $n$). 
+~\\
+~\\
+\textbf{Proof:} 
+\qed
+\newpage
+~\\
+
+\noindent \textbf{1.10 Theorem.} \emph{Let $a$, $b$, and $n$ be integers with $n>0$. 
+If $a \equiv b$} (mod $n$)\emph{, then $b \equiv a$} (mod $n$).
+~\\
+~\\
+\textbf{Proof:} 
+ \qed
+~\\
+~\\
+
+\noindent \textbf{1.11 Theorem.} \emph{Let $a$, $b$, $c$, and $n$ be integers with $n>0$. 
+If $a \equiv b$ (}mod\emph{ $n$) and $b \equiv c$ (}mod\emph{ $n$), then $a \equiv c$ 
+(}mod\emph{ $n$).}
+~\\
+~\\
+\textbf{Proof:}  \qed
+
+\end{document}
