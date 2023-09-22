@@ -116,7 +116,13 @@ The vectors lie along a line since the dot product is a linear equation. Thus, a
 \section*{Section 1.3}
 
 \subsection*{Problem 4}
-
+From the vectors we have the following 3 equations since $x_1 = 1$.
+\[
+    1 + 4x_2 + 7x_3 = 0 \; \; \; \; \; 
+    2 + 5x_2 + 8x_3 = 0 \; \; \; \; \; 
+    3 + 6x_2 + 9x_3 = 0
+\]
+We begin solving this sytem by adding $3 + 6x_2 + 9x_3 = 0$ and $\frac{-3}{2}(1 + 4x_2 + 7x_3 = 0)$ to find that $\frac{3}{2} - \frac{3}{2}x_3 = 0$. Thus, $x_3 = 1$. Substituting $x_3$ back into one of the original equations yields $3 + 6x_2 + 9(1) = 0$. Thus, $x_2 = -2$. Hence, the final solution is $x_1 = 1, x_2 = -2, x_3 = 1$. 
 \subsection*{Problem 13}
 
 
@@ -140,7 +146,21 @@ The vectors lie along a line since the dot product is a linear equation. Thus, a
 = \begin{bmatrix} .65 \\ .35 \end{bmatrix}
 \]
 
+\subsection*{Problem 30}
+You can see that both vectors converge to $\begin{bmatrix} 0.6 \\ 0.4 \end{bmatrix}$.
+
+\includegraphics[scale=0.55]{s21p30a.png}
+\includegraphics[scale=0.55]{s21p30b.png}
+
+\noindent We can prove this by showing that $\begin{bmatrix} 0.6 \\ 0.4 \end{bmatrix}$ does not change when multiplied by our Markov Matrix.
+
+\begin{center}
+    \includegraphics[scale=0.75]{s21p30c.png}
+\end{center}
+
 \section*{Section 2.2}
+
+\emph{Three planes can fail to have an intersection point, even if no planes are parallel. The system is singular if row 3 of $A$ is a \textbf{linear combination} of the first two rows.}
 
 \section*{Section 2.3}
 
