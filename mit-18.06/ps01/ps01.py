@@ -5,7 +5,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 
-def main():
+def s21p30():
     # define Markov matrix and initial vector u
     A = np.array([
         [0.8, 0.3],
@@ -58,6 +58,44 @@ def main():
     plt.savefig("s21p30c.png")
     plt.show()
 
+
+def s23p29():
+    E3 = np.array([
+        [1, 0, 0, 0],
+        [0, 1, 0, 0],
+        [0, 0, 1, 0],
+        [0, 0, -1, 1]
+    ])
+    E2 = np.array([
+        [1, 0, 0, 0],
+        [0, 1, 0, 0],
+        [0, -1, 1, 0],
+        [0, -1, 0, 1],
+    ])
+    E1 = np.array([
+        [1, 0, 0, 0],
+        [-1, 1, 0, 0],
+        [-1, 0, 1, 0],
+        [-1, 0, 0, 1],
+    ])
+    P_init = np.array([
+        [1, 0, 0, 0],
+        [1, 1, 0, 0],
+        [1, 2, 1, 0],
+        [1, 3, 3, 1],
+    ])
+    P_final = np.array([
+        [1, 0, 0, 0],
+        [0, 1, 0, 0],
+        [0, 1, 1, 0],
+        [0, 1, 2, 1],
+    ])
+    assert np.sum((E3 @ E2 @ E1 @ P_init) == P_final) == 16
+    print("Answer:\n", E3 @ E2 @ E1)
+
+
+def main():
+    s23p29()
 
 
 if __name__ == "__main__":
