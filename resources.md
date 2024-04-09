@@ -1,3 +1,25 @@
+## Subdisciplines
+- Algebra
+- Geoemetry
+- Trigonometry
+- Differential Calculus
+- Integral Calculus
+- Multivariable Calculus
+- Real Analysis
+- Differential Equations
+- Partial Differential Equations
+- Probability
+- Statistics
+- Stochatic Processes
+- Linear Algebra
+- Discrete Mathematics
+- Number Theory
+- Complex Analysis
+- Algebraic Structures
+- Topology
+- Game Theory
+- Fourier and Laplace Tranforms
+
 ## University Courses
 ### Calculus
 
