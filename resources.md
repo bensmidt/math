@@ -47,3 +47,6 @@
 - [Differential Equations and Linear Algebra (2014)](https://drive.google.com/file/d/1UWDOowsqE5LZppXem8IxCg5J2Pr74ktW/view?usp=drive_link)
 
 ### Other
+
+### Projects
+- Implement matrix algorithm library in CUDA
